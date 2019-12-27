@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-3">
+        <p>品物</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.name }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <p>画像</p>
+    </div>
+    <div class="col-9">
+        <img src="{{ item.image.url }}" width="500px" height="400px" >
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>落とした？or拾った？</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.get_type_display }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>備考</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.memo|linebreaksbr }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>登録日</p>
+    </div>
+    <div class="col-9">
+        <p>{{ item.created_at|date:"Y/m/d G:i:s" }}</p>
+    </div>
+</div>
